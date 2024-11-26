@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: auto;
+            gap: 10px;
+        }
+        .quadrado {
+            width: 100px;
+            height: 100px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+        /* Ajusta o layout específico para 2 quadrados nas duas primeiras linhas */
+        .quadrado:nth-child(1), .quadrado:nth-child(2) {
+            grid-column: span 1;
+        }
+        .quadrado:nth-child(3), .quadrado:nth-child(4) {
+            grid-column: span 1;
+        }
+        .quadrado:nth-child(5), .quadrado:nth-child(6), .quadrado:nth-child(7) {
+            grid-column: span 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quadrado">1</div>
+        <div class="quadrado">2</div>
+        <div class="quadrado">3</div>
+        <div class="quadrado">4</div>
+        <div class="quadrado">5</div>
+        <div class="quadrado">6</div>
+        <div class="quadrado">7</div>
+    </div>
+</body>
+</html>
